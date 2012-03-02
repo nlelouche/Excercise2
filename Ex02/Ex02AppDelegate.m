@@ -24,6 +24,30 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    NSString *myString;
+    
+    
+    myString = [[NSString alloc] initWithString:@"myStringOne"];
+    
+    NSString *myString2 = [myString uppercaseString];
+    
+    NSMutableArray *list = [[NSMutableArray alloc] init];
+    
+    [list addObject:@"OneString"];
+    [list addObject:myString];
+    [list addObject:myString2];
+    [list addObject:[myString lowercaseString]];
+    
+    for (NSString *s in list) {
+        NSLog(@"String: %@",s);
+    }
+        
+    
+   // NSMutableDictionary *dictionaryOne = [[NSMutableDictionary alloc] initwith   
+   // http://eureka.ykyuen.info/2010/07/18/objective-c-nsdictionary-example/ 
+    [myString release];
+    [list release];
     return YES;
 }
 
